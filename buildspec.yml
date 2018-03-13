@@ -12,7 +12,7 @@ phases:
       - if [ "$CODEBUILD_SOURCE_VERSION" ]; then BUILD_DIR="build-output-$CODEBUILD_SOURCE_VERSION"; fi
       - echo $BUILD_DIR
       # copy the template file into the lambda directory.
-      - cp template.yaml lambda
+      - cp -t lambda template-cognito.yaml template-sam.yaml
       # hop into the lambda directory
       - cd lambda
        # determine package name
