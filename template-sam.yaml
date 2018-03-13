@@ -13,4 +13,4 @@ Resources:
       Description: test cf
       MemorySize: 128
       Timeout: 30
-      CodeUri: s3://chris-build-00-oregon-public/lambda-web-page-example/build-output-master/lambda-web-page-example~0.1.10.zip
+      CodeUri: s3://chris-build-00-oregon-public/test-cf/build-output/test-cf~0.1.0.zip
