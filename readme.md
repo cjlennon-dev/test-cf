@@ -1,6 +1,6 @@
 # test-cf
 
-This will become voyzu-core-setup-cognito
+Test of cloud formation two phase deployment
 
 ## Intallation
 

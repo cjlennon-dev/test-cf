@@ -6,8 +6,6 @@ Resources:
     Type: AWS::Serverless::Function
     Properties:
       FunctionName: test-cf
-      Policies: 
-        - AWSLambdaDynamoDBExecutionRole
       Handler: index.handler
       Runtime: nodejs6.10
       Description: test cf
