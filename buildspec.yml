@@ -32,6 +32,6 @@ artifacts:
   files:
     # specify build artifacts
     - $BUILD_DIR/$packageName~$version.zip
-    - $BUILD_DIR/template.yaml
+    - $BUILD_DIR/template-cognito.yaml
     - $BUILD_DIR/template-sam.yaml
   base-directory: lambda
