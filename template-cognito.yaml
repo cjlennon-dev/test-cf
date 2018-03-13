@@ -1,0 +1,22 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Resources:
+  MyCognitoUserPool:
+    Type: "AWS::Cognito::UserPool"
+    # https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html
+    Properties:
+      UserPoolName: MyUserPool
+      AliasAttributes: [email]
+      Policies:
+        PasswordPolicy:
+          MinimumLength: 6
+          RequireLowercase: false
+          RequireNumbers: false
+          RequireSymbols: false
+          RequireUppercase: false
+  MyCognitoUserPoolClient:
+    Type: "AWS::Cognito::UserPoolClient"
+    Properties:
+#      https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html
+        ClientName: My Client
+        GenerateSecret: false
+        UserPoolId: !Ref MyCognitoUserPool

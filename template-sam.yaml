@@ -1,0 +1,16 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: Cloud formation test of how far we can push the permission thing
+Resources:
+  LambdaWebPageLambdaFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: test-cf
+      Policies: 
+        - AWSLambdaDynamoDBExecutionRole
+      Handler: index.handler
+      Runtime: nodejs6.10
+      Description: test cf
+      MemorySize: 128
+      Timeout: 30
+      CodeUri: s3://chris-build-00-oregon-public/lambda-web-page-example/build-output-master/lambda-web-page-example~0.1.10.zip

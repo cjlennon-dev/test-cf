@@ -1,0 +1,19 @@
+{
+  "name": "test-cf",
+  "version": "0.1.0",
+  "description": "cloud formation test",
+  "main": "index.js",
+  "scripts": {
+    "mock": "node mock/mock.js",
+    "git-nuke-history": "git checkout --orphan latest_branch & git add -A & git commit -am \"initial commit\" & git branch -D master &  git branch -m master & git push -f origin master"
+  },
+  "author": "Chris Lennon",
+  "license": "MIT",
+  "dependencies": {
+    "cfn": "^1.2.0",
+    "dotenv": "^5.0.1"
+  },
+  "devDependencies": {
+    "aws-sdk": "^2.207.0"
+  }
+}
